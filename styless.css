@@ -1,0 +1,184 @@
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background: linear-gradient(90deg, #1f1f1f, #333);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  }
+  
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff5722;
+  }
+  
+  .navbar-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
+  .navbar-links a {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #ff5722;
+    transform: scale(1.1);
+  }
+  
+  /* Hamburger Icon (For Mobile View) */
+  .navbar-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #e0e0e0;
+  }
+  
+  .navbar-toggle.active i {
+    color: #ff5722;
+  }
+  
+  /* Show Navbar Links on Mobile */
+  .navbar-links.active {
+    display: block;
+    width: 100%;
+    background-color: #1f1f1f;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  }
+  
+  .navbar-links a {
+    padding: 10px;
+    text-align: center;
+    display: block;
+    font-size: 1.2rem;
+  }
+  
+  /* Contact Section */
+  #contact {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  #contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  #contact p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Contact Cards */
+  .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .contact-card {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+  }
+  
+  .contact-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .contact-card i {
+    font-size: 3rem;
+    color: #25D366; /* WhatsApp Green */
+    margin-bottom: 15px;
+  }
+  
+  .contact-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .contact-card p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  .contact-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25D366; /* WhatsApp Green */
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-btn:hover {
+    background-color: #128C7E;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    color: #b0b0b0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar-links {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar-links.active {
+      display: flex;
+    }
+  
+    .navbar-links a {
+      margin: 10px 0;
+    }
+  
+    .navbar-toggle {
+      display: block;
+    }
+  }
+  

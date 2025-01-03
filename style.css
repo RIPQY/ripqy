@@ -1,0 +1,178 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background: linear-gradient(90deg, #4b0000, #ce2222);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  }
+  
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #eae8e8;
+  }
+  
+  .navbar-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
+  .navbar-links a {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #ff5722;
+    transform: scale(1.1);
+  }
+  
+  /* Login Section */
+  .login-section {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-container {
+    background-color: #1f1f1f;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .login-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff5722;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    color: #e0e0e0;
+    border-radius: 5px;
+  }
+  
+  .input-group input:focus {
+    outline: none;
+    border-color: #ff5722;
+  }
+  
+  /* Login Button */
+  .btn-login {
+    padding: 12px;
+    background-color: #ff5722;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-login:hover {
+    background-color: #e64a19;
+  }
+  
+  /* Social Login Section */
+  .social-login p {
+    margin: 20px 0;
+    color: #e0e0e0;
+  }
+  
+  .btn-google {
+    padding: 12px;
+    background-color: #25D366; /* WhatsApp Green */
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-google:hover {
+    background-color: #128C7E;
+  }
+  
+  .btn-google i {
+    font-size: 1.5rem;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    color: #b0b0b0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .login-container {
+      padding: 20px;
+      width: 90%;
+    }
+  
+    .btn-google {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  
+    .btn-login {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  }
+  

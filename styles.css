@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #353131;
+    color: #e0e0e0;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* Navbar Styles */
+  .navbar {
+    background: linear-gradient(90deg, #343232, #561c24);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(247, 244, 244, 0.7);
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fafafa;
+    text-transform: uppercase;
+  }
+
+  .navbar-links a {
+    color: #e0e0e0;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .navbar-links a:hover {
+    color: #912130;
+    transform: scale(1.1);
+  }
+
+  .navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .navbar-toggle div {
+    width: 30px;
+    height: 4px;
+    margin: 6px 0;
+    background-color: #e0e0e0;
+    transition: transform 0.3s ease;
+  }
+
+  /* Header Styles */
+  .header {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    background-image: url('cocacola\ merah\ yang\ terletak\ di\ freezer\ minimarket.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    z-index: 1;
+    transition: background-color 0.5s ease-in-out;
+  }
+
+  .header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+
+  .header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    animation: fadeIn 1.5s ease-out;
+  }
+
+  .header p {
+    font-size: 1.2rem;
+    animation: fadeIn 2s ease-out;
+  }
+
+  /* Image Grid Styles */
+  .home-content {
+    padding: 20px;
+    animation: fadeInUp 2s ease-out;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .grid-item {
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .grid-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .grid-item:hover {
+    transform: scale(1.05);
+    background-color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  }
+
+  .grid-item:hover img {
+    transform: scale(1.1);
+  }
+
+  .grid-item .description {
+    padding: 15px;
+    color: #e0e0e0;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0;
+    animation: slideUp 0.5s ease-in-out forwards;
+  }
+
+  .grid-item:hover .description {
+    opacity: 1;
+  }
+
+  .download-btn {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin: 15px;
+    background-color: #ff5722;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .download-btn:hover {
+    background-color: #e64a19;
+  }
+
+  .download-btn i {
+    margin-right: 8px;
+  }
+
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 80%;
+    text-align: center;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .modal-close:hover {
+    color: #ff5722;
+  }
+
+  .modal img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: cover;
+  }
+
+  /* Footer */
+  .footer {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    color: #b0b0b0;
+    font-size: 0.9rem;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar-links {
+      display: none;
+    }
+
+    .navbar-toggle {
+      display: flex;
+    }
+
+    .navbar-toggle.active div:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .navbar-toggle.active div:nth-child(2) {
+      opacity: 0;
+    }
+
+    .navbar-toggle.active div:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .navbar-links.active {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #333;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .navbar-links a {
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+
+    .header h1 {
+      font-size: 2.2rem;
+    }
+
+    .header p {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header h1 {
+      font-size: 1.8rem;
+    }
+
+    .header p {
+      font-size: 1rem;
+    }
+
+    .grid {
+      gap: 10px;
+    }
+  }
+
+  /* Keyframes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
